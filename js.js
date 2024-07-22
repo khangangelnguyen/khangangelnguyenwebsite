@@ -35,7 +35,7 @@ function changeVideoSource(classNum) {
 
   var video = document.getElementById('myVideo');
   var source = video.querySelector('source');
-  source.src = 'lib/webreel' + classNum + '.mov'; // Adjust the path and file extension if needed
+  source.src = 'webreel' + classNum + '.mp4'; // Adjust the path and file extension if needed
   video.load(); // Reload the video to apply the new source
 }
 
