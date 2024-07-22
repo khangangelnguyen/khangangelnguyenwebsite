@@ -33,7 +33,7 @@
   }
   .container0 {z-index: 0; position: relative;height: 100vh;}
   .container1 {  display: grid; z-index: 2; position: absolute;top:0; left:0; width: 100%;
-    grid-template-columns: 30% 1fr 30%;
+    grid-template-columns: 20% 1fr 20%;
     grid-template-rows: 5% 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
