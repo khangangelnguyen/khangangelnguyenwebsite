@@ -1,0 +1,156 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Optionally, set box-sizing to border-box to include borders and padding in the element's total width and height */
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  img {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;}
+  video {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  }
+  /* Remove margin and padding for body and html elements */
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;font-size: 2.5vh;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.025vh;
+    background-color: black;
+  }
+  .container0 {z-index: 0; position: relative;height: 100vh;}
+  .container1 {  display: grid; z-index: 2; position: absolute;top:0; left:0; width: 100%;
+    grid-template-columns: 30% 1fr 30%;
+    grid-template-rows: 5% 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "menu header ."
+      "menu . .";
+      height: 100vh;background-color: transparent;
+  }
+  
+  .container2 {z-index: 1; position: absolute;
+    top:0; left:0; width: 100%;
+      height: 100vh;
+  } 
+  .header {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "home project title about contact";
+    grid-area: header;
+    font-size: 1.5vh;
+  }
+  
+  .home { grid-area: home;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  
+  .project { grid-area: project;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  
+  .title { grid-area: title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.05vh solid white;
+ }
+  
+  .about { grid-area: about;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  
+  .contact { grid-area: contact;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    
+  .menu { 
+    display: grid; 
+    grid-template-columns: 7.5% 1fr 7.5%; 
+    grid-template-rows: 30% 1fr 30%; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        ". . ."
+        ". menuContainer ."
+        ". . ."; 
+    grid-area: menu; 
+    font-size: 2.5vh;
+    }
+    .menuContainer {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "film1"
+        "film2"
+        "film3"
+        "film4"
+        "film5"
+        "film6"
+        "film7"
+        "film8"
+        "film9"; 
+    grid-area: menuContainer; 
+    }
+    .film1 { grid-area: film1;
+        display: flex;
+        align-items: center;
+        justify-content: left; cursor: pointer;}
+    .film2 { grid-area: film2;
+        display: flex;
+        align-items: center;
+        justify-content: left; cursor: pointer;}
+    .film3 { grid-area: film3;
+        display: flex;
+        align-items: center;
+        justify-content: left; cursor: pointer;}
+    .film4 { grid-area: film4;
+        display: flex;
+        align-items: center;
+        justify-content: left; cursor: pointer;}
+    .film5 { grid-area: film5;
+        display: flex;
+        align-items: center;
+        justify-content: left; cursor: pointer;}
+    .film6 { grid-area: film6;
+        display: flex;
+        align-items: center;
+        justify-content: left;cursor: pointer; }
+    .film7 { grid-area: film7;
+        display: flex;
+        align-items: center;
+        justify-content: left; cursor: pointer;}
+    .film8 { grid-area: film8;
+        display: flex;
+        align-items: center;
+        justify-content: left; cursor: pointer;}
+    .film9 { grid-area: film9;
+        display: flex;
+        align-items: center;
+        justify-content: left; cursor: pointer;}
+    .filmHover {
+        opacity: 25%;
+    }
+    
