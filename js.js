@@ -1,7 +1,7 @@
 space = "&nbsp;";
 enter = "<br>";
 hr = "<hr>";
-
+Access-Control-Allow-Origin: https://khangangelnguyen.com;
 function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3, whiteId1, whiteId2) {
   const trigger = document.getElementById(triggerId);
   const target = document.getElementById(targetId);
