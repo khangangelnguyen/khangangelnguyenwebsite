@@ -18,7 +18,6 @@ function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3,
           video.src = videoSrc;
           video.autoplay = true;
           video.loop = true;
-          video.muted = true;
           target.replaceChild(video, img);
       }
 
