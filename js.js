@@ -15,6 +15,7 @@ function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3,
       const img = target.querySelector('img');
       if (img) {
           const video = document.createElement('video');
+          video.type = "video/webm";
           video.src = videoSrc;
           video.autoplay = true;
           video.loop = true;
