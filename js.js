@@ -67,12 +67,12 @@ function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3,
 }
 
 // Handling each div individually with additional white elements
-addHoverEffect('post1a', 'post1b', 'lib/reel1pic.jpg', 'lib/reel1video.mp4', 'post1atransparent1', 'post1atransparent3', 'post1awhite1', 'post1awhite2');
-addHoverEffect('post2a', 'post2b', 'lib/reel2pic.jpg', 'lib/reel2video.mp4', 'post2atransparent1', 'post2atransparent3', 'post2awhite1', 'post2awhite2');
-addHoverEffect('post3a', 'post3b', 'lib/reel3pic.jpg', 'lib/reel3video.mp4', 'post3atransparent1', 'post3atransparent3', 'post3awhite1', 'post3awhite2');
-addHoverEffect('post4a', 'post4b', 'lib/reel4pic.jpg', 'lib/reel4video.mp4', 'post4atransparent1', 'post4atransparent3', 'post4awhite1', 'post4awhite2');
-addHoverEffect('post5a', 'post5b', 'lib/reel5pic.jpg', 'lib/reel5video.mp4', 'post5atransparent1', 'post5atransparent3', 'post5awhite1', 'post5awhite2');
-addHoverEffect('post6a', 'post6b', 'lib/reel6pic.jpg', 'lib/reel6video.mp4', 'post6atransparent1', 'post6atransparent3', 'post6awhite1', 'post6awhite2');
+addHoverEffect('post1a', 'post1b', 'reel1pic.jpg', 'reel1video.mp4', 'post1atransparent1', 'post1atransparent3', 'post1awhite1', 'post1awhite2');
+addHoverEffect('post2a', 'post2b', 'reel2pic.jpg', 'reel2video.mp4', 'post2atransparent1', 'post2atransparent3', 'post2awhite1', 'post2awhite2');
+addHoverEffect('post3a', 'post3b', 'reel3pic.jpg', 'reel3video.mp4', 'post3atransparent1', 'post3atransparent3', 'post3awhite1', 'post3awhite2');
+addHoverEffect('post4a', 'post4b', 'reel4pic.jpg', 'reel4video.mp4', 'post4atransparent1', 'post4atransparent3', 'post4awhite1', 'post4awhite2');
+addHoverEffect('post5a', 'post5b', 'reel5pic.jpg', 'reel5video.mp4', 'post5atransparent1', 'post5atransparent3', 'post5awhite1', 'post5awhite2');
+addHoverEffect('post6a', 'post6b', 'reel6pic.jpg', 'reel6video.mp4', 'post6atransparent1', 'post6atransparent3', 'post6awhite1', 'post6awhite2');
 
 var cursor = {
   delay: 8,
