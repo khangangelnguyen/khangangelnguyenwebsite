@@ -19,7 +19,7 @@ function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3,
           // Add source element
           const sourceWebm = document.createElement('source');
           sourceWebm.src = videoSrc;
-          sourceWebm.type = 'video/webm';
+          sourceWebm.type = 'video/mp4';
           video.appendChild(sourceWebm);
 
           target.replaceChild(video, img);
