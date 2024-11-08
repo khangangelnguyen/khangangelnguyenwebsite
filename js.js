@@ -15,10 +15,16 @@ function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3,
       const img = target.querySelector('img');
       if (img) {
           const video = document.createElement('video');
-          video.src = videoSrc;
           video.autoplay = true;
           video.loop = true;
           video.muted = true;
+
+          // Add source element
+          const sourceWebm = document.createElement('source');
+          sourceWebm.src = videoSrc;
+          sourceWebm.type = 'video/webm';
+          video.appendChild(sourceWebm);
+
           target.replaceChild(video, img);
       }
 
