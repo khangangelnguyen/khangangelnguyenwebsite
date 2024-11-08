@@ -67,12 +67,12 @@ function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3,
 }
 
 // Handling each div individually with additional white elements
-addHoverEffect('post1a', 'post1b', 'reel1pic.jpg', 'reel1video.webm', 'post1atransparent1', 'post1atransparent3', 'post1awhite1', 'post1awhite2');
-addHoverEffect('post2a', 'post2b', 'reel2pic.jpg', 'reel2video.webm', 'post2atransparent1', 'post2atransparent3', 'post2awhite1', 'post2awhite2');
-addHoverEffect('post3a', 'post3b', 'reel3pic.jpg', 'reel3video.webm', 'post3atransparent1', 'post3atransparent3', 'post3awhite1', 'post3awhite2');
-addHoverEffect('post4a', 'post4b', 'reel4pic.jpg', 'reel4video.webm', 'post4atransparent1', 'post4atransparent3', 'post4awhite1', 'post4awhite2');
-addHoverEffect('post5a', 'post5b', 'reel5pic.jpg', 'reel5video.webm', 'post5atransparent1', 'post5atransparent3', 'post5awhite1', 'post5awhite2');
-addHoverEffect('post6a', 'post6b', 'reel6pic.jpg', 'reel6video.webm', 'post6atransparent1', 'post6atransparent3', 'post6awhite1', 'post6awhite2');
+addHoverEffect('post1a', 'post1b', 'images/reel1pic.jpg', 'videos/reel1video.webm', 'post1atransparent1', 'post1atransparent3', 'post1awhite1', 'post1awhite2');
+addHoverEffect('post2a', 'post2b', 'images/reel2pic.jpg', 'videos/reel2video.webm', 'post2atransparent1', 'post2atransparent3', 'post2awhite1', 'post2awhite2');
+addHoverEffect('post3a', 'post3b', 'images/reel3pic.jpg', 'videos/reel3video.webm', 'post3atransparent1', 'post3atransparent3', 'post3awhite1', 'post3awhite2');
+addHoverEffect('post4a', 'post4b', 'images/reel4pic.jpg', 'videos/reel4video.webm', 'post4atransparent1', 'post4atransparent3', 'post4awhite1', 'post4awhite2');
+addHoverEffect('post5a', 'post5b', 'images/reel5pic.jpg', 'videos/reel5video.webm', 'post5atransparent1', 'post5atransparent3', 'post5awhite1', 'post5awhite2');
+addHoverEffect('post6a', 'post6b', 'images/reel6pic.jpg', 'videos/reel6video.webm', 'post6atransparent1', 'post6atransparent3', 'post6awhite1', 'post6awhite2');
 
 var cursor = {
   delay: 8,
