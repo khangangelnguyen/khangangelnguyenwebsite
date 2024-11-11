@@ -1,7 +1,23 @@
 space = "&nbsp;";
 enter = "<br>";
 hr = "<hr>";
+function enforceLandscapeLayout() {
+            const wrapper = document.getElementById('pageWrapper');
+            
+            if (window.orientation === 90 || window.orientation === -90 || window.innerWidth > window.innerHeight) {
+                // Landscape mode - no rotation needed
+                wrapper.classList.remove('portrait');
+                wrapper.classList.add('landscape');
+            } else {
+                // Portrait mode - apply rotation
+                wrapper.classList.remove('landscape');
+                wrapper.classList.add('portrait');
+            }
+        }
 
+        // Run on load and on orientation change
+        window.addEventListener('load', enforceLandscapeLayout);
+        window.addEventListener('orientationchange', enforceLandscapeLayout);
 function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3, whiteId1, whiteId2) {
   const trigger = document.getElementById(triggerId);
   const target = document.getElementById(targetId);
