@@ -1,28 +1,5 @@
 
-  
-  /* Optionally, set box-sizing to border-box to include borders and padding in the element's total width and height */
-/* Basic styling for the wrapper */
-        .page-wrapper {
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-            transform-origin: center;
-            transition: transform 0.3s ease, scale 0.3s ease;
-        }
 
-        /* Landscape-specific styles */
-        .landscape {
-            transform: none;
-        }
-
-        /* Portrait mode - rotate content */
-        .portrait {
-            transform: rotate(-90deg);
-            width: 100vh;
-            height: 1000vw;
-            overflow-y: hidden; /* Prevent scrolling */
-        }
 
   *,
   *:before,
