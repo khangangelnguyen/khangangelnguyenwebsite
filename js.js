@@ -20,6 +20,7 @@ function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3,
           const sourceVideo = document.createElement('source');
           sourceVideo.src = videoSrc;
           sourceVideo.type = 'video/mp4';
+          sourceVideo.autoplay = true;
           sourceVideo.loop = true;
           sourceVideo.muted = true;
           video.appendChild(sourceWebm);
