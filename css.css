@@ -20,7 +20,7 @@
         .portrait {
             transform: rotate(-90deg);
             width: 100vh;
-            height: 300vw;
+            height: 1000vw;
             overflow-y: hidden; /* Prevent scrolling */
         }
 
