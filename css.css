@@ -4,6 +4,7 @@
 /* Basic styling for the wrapper */
         .page-wrapper {
             width: 100vw;
+            height: 100vh;
             overflow: hidden;
             position: relative;
             transform-origin: center;
@@ -19,7 +20,6 @@
         .portrait {
             transform: rotate(-90deg);
             width: 100vh;
-            height: 100vw;
             overflow-y: hidden; /* Prevent scrolling */
         }
 
