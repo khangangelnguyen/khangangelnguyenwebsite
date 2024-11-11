@@ -1,392 +1,291 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
 
-
-
-  *,
-  *:before,
-  *:after {
+/* Optionally, set box-sizing to border-box to include borders and padding in the element's total width and height */
+*,
+*:before,
+*:after {
     box-sizing: border-box;
-  }
-  img {
+}
+img, video {
     width: 100%;
-  height: 100%;
-  object-fit: cover;}
-  video {
-    width: 100%;
-  height: 100%;
-  object-fit: cover;
-  }
-  /* Remove margin and padding for body and html elements */
-  body,
-  html {
+    height: 100%;
+    object-fit: cover;
+}
+/* Remove margin and padding for body and html elements */
+body,
+html {
     margin: 0;
     padding: 0;
     font-size: 5vmin;
     color: #575757;
     font-family: 'Alumni Sans Pinstripe';
     -webkit-font-smoothing: antialiased;
-    background-color: white;overflow: auto;cursor: none;  width: 100%;scroll-snap-type: y mandatory;scroll-behavior:smooth;
-  }
-  .alumni-sans-pinstripe-regular {
+    background-color: white;
+    overflow: auto;
+    cursor: none;
+    width: 100%;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+/* Styles for portrait mode */
+@media only screen and (orientation: portrait) {
+    body,
+    html {
+        width: 100vh;
+        height: 100vw;
+        /* Adjust other styles as needed */
+    }
+}
+
+.alumni-sans-pinstripe-regular {
     font-family: "Alumni Sans Pinstripe", sans-serif;
     font-weight: 300;
     font-style: normal;
-  }
-  
-  .alumni-sans-pinstripe-regular-italic {
+}
+.alumni-sans-pinstripe-regular-italic {
     font-family: "Alumni Sans Pinstripe", sans-serif;
     font-weight: 300;
     font-style: italic;
-  }
-  .cursor-dot {
-      pointer-events: none;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      border-radius: 50%;
-      opacity: 0;
-      z-index: 10;
-  }
-  
-  .cursor-dot {
-      width: 1vh;
-      height: 1vh;
-      background-color: black;
-  }
-  
-  
-  .layer0 {  display: grid; 
-    grid-template-columns: 20% 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    "menu main"; 
-    height: 100vh;background-color: transparent;
-  }
-  .menu { grid-area: menu;display: grid;position: fixed;
-    top: 0;
-    left: 0;width: 20%;
+}
+.cursor-dot {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 10;
+}
+.cursor-dot {
+    width: 1vh;
+    height: 1vh;
+    background-color: black;
+}
+.layer0 {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "menu main";
     height: 100vh;
-    grid-template-columns: 20% 1fr 20%; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      ". . ."
-      ". title ."
-      ". menu2 ."
-      ". slogan ."
-      ". slogan ."
-      ". . ."
-      ". . ."
-      ". . ."
-      ". . ."
-      ". . ."; height: 100vh; pointer-events: none;}
-  .title { grid-area: title;
+    background-color: transparent;
+}
+.menu {
+    grid-area: menu;
+    display: grid;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100vh;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: repeat(10, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . ."
+        ". title ."
+        ". menu2 ."
+        ". slogan ."
+        ". slogan ."
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . .";
+    pointer-events: none;
+}
+.title {
+    grid-area: title;
     display: flex;
-    align-items:flex-end;
-    justify-content: left;font-size: 4vmin; }
-  .menu2 { grid-area: menu2;
-    display: grid; 
-    grid-template-columns: 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-    "."
-    "work"
-    "about"
-    "contact"
-    "instagram"
-    ".";font-size: 2vmin; }
-  .work { grid-area: work;display: flex;
-    align-items:center;
-    justify-content: left;  }
-  .about { grid-area: about;display: flex;
-    align-items:center;
-    justify-content:left;  }
-  .contact { grid-area: contact;display: flex;
-    align-items:center;
-    justify-content: left;  }
-  .instagram { grid-area: instagram;display: flex;
-    align-items:center;
-    justify-content: left; }
-
-  .slogan { grid-area: slogan;display: flex;
-    align-items:flex-start;
+    align-items: flex-end;
     justify-content: left;
-    font-size: 1.5vmin; }
-  
-  .main { grid-area: main;z-index: 0; position: relative;
-    height: 300vh; 
-  }  
-  .maina { z-index: 2; position: absolute;top:0; left:0;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 5%; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "header header header ."
-      "post1a post1a post1a ."
-      "post1a post1a post1a ."
-      "post1a post1a post1a ."
-      "post1a post1a post1a ."
-      "post1a post1a post1a ."
-      "post2a post2a post2a ."
-      "post2a post2a post2a ."
-      "post2a post2a post2a ."
-      "post2a post2a post2a ."
-      "post2a post2a post2a ."
-      "post3a post3a post3a ."
-      "post3a post3a post3a ."
-      "post3a post3a post3a ."
-      "post3a post3a post3a ."
-      "post3a post3a post3a ."
-      "post4a post4a post4a ."
-      "post4a post4a post4a ."
-      "post4a post4a post4a ."
-      "post4a post4a post4a ."
-      "post4a post4a post4a ."
-      "post5a post5a post5a ."
-      "post5a post5a post5a ."
-      "post5a post5a post5a ."
-      "post5a post5a post5a ."
-      "post5a post5a post5a ."
-      "post6a post6a post6a ."
-      "post6a post6a post6a ."
-      "post6a post6a post6a ."
-      "post6a post6a post6a ."
-      "post6a post6a post6a ."
-      ". . . ."; 
-      height: 300vh; width: 100%;
-  }
-  .header { grid-area: header; 
-    display: flex;
-    align-items:flex-end;
-    justify-content: left;font-size: 3vmin;scroll-snap-align:start;
-  }
-
-  .post1a {
-    display: grid; 
-    grid-template-columns: 1fr 0.20% 1fr 0.20% 1fr; 
-    grid-template-rows: 0.25% 1fr 0.25%; 
-    gap: 0px 0px; 
+    font-size: 4vmin;
+}
+.menu2 {
+    grid-area: menu2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0px 0px;
     grid-template-areas:
-      "post1awhite0 post1awhite0 post1awhite0 post1awhite0 post1awhite0"
-      "post1atransparent1 post1awhite1 post1atransparent2 post1awhite2 post1atransparent3"
-      "post1awhite3 post1awhite3 post1awhite3 post1awhite3 post1awhite3";
-    grid-area: post1a;scroll-snap-align: center;scroll-snap-stop: always;
-  }
-  .post1awhite0 { grid-area: post1awhite0; background-color:white;}
-  .post1awhite1 { grid-area: post1awhite1; background-color:white;}
-  .post1awhite2 { grid-area: post1awhite2; background-color:white;}
-  .post1awhite3 { grid-area: post1awhite3; background-color:white;}
-  .post1atransparent1 { grid-area: post1atransparent1; background-color:transparent; color: white;font-size: 5vmin;
+        "."
+        "work"
+        "about"
+        "contact"
+        "instagram"
+        ".";
+    font-size: 2vmin;
+}
+.work, .about, .contact, .instagram {
     display: flex;
-    align-items:center;
-    justify-content: center;text-align: center;}
-  .post1atransparent2 { grid-area: post1atransparent2; background-color:transparent; color: white; 
+    align-items: center;
+    justify-content: left;
+}
+.slogan {
+    grid-area: slogan;
     display: flex;
-    align-items:center;
-    justify-content: center}
-  .post1atransparent3 { grid-area: post1atransparent3; background-color:transparent; color: white;font-size: 5vmin;
-    display: flex;
-    align-items:center;
-    justify-content: center;text-align: center;}
-
-  .post2a {
-    display: grid; 
-    grid-template-columns: 1fr 0.20% 1fr 0.20% 1fr; 
-    grid-template-rows: 0.25% 1fr 0.25%; 
-    gap: 0px 0px; 
+    align-items: flex-start;
+    justify-content: left;
+    font-size: 1.5vmin;
+}
+.main {
+    grid-area: main;
+    z-index: 0;
+    position: relative;
+    height: 300vh;
+}
+.maina {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 5%;
+    grid-template-rows: repeat(32, 1fr);
+    gap: 0px 0px;
     grid-template-areas:
-      "post2awhite0 post2awhite0 post2awhite0 post2awhite0 post2awhite0"
-      "post2atransparent1 post2awhite1 post2atransparent2 post2awhite2 post2atransparent3"
-      "post2awhite3 post2awhite3 post2awhite3 post2awhite3 post2awhite3";
-    grid-area: post2a;scroll-snap-align: center;scroll-snap-stop: always;
-  }
-  .post2awhite0 { grid-area: post2awhite0; background-color:white;}
-  .post2awhite1 { grid-area: post2awhite1; background-color:white;}
-  .post2awhite2 { grid-area: post2awhite2; background-color:white;}
-  .post2awhite3 { grid-area: post2awhite3; background-color:white;}
-  .post2atransparent1 { grid-area: post2atransparent1; background-color:transparent; color: white;font-size: 5vmin;
+        "header header header ."
+        "post1a post1a post1a ."
+        "post1a post1a post1a ."
+        "post1a post1a post1a ."
+        "post1a post1a post1a ."
+        "post1a post1a post1a ."
+        "post2a post2a post2a ."
+        "post2a post2a post2a ."
+        "post2a post2a post2a ."
+        "post2a post2a post2a ."
+        "post2a post2a post2a ."
+        "post3a post3a post3a ."
+        "post3a post3a post3a ."
+        "post3a post3a post3a ."
+        "post3a post3a post3a ."
+        "post3a post3a post3a ."
+        "post4a post4a post4a ."
+        "post4a post4a post4a ."
+        "post4a post4a post4a ."
+        "post4a post4a post4a ."
+        "post4a post4a post4a ."
+        "post5a post5a post5a ."
+        "post5a post5a post5a ."
+        "post5a post5a post5a ."
+        "post5a post5a post5a ."
+        "post5a post5a post5a ."
+        "post6a post6a post6a ."
+        "post6a post6a post6a ."
+        "post6a post6a post6a ."
+        "post6a post6a post6a ."
+        "post6a post6a post6a ."
+        ". . . .";
+    height: 300vh;
+    width: 100%;
+}
+.header {
+    grid-area: header;
     display: flex;
-    align-items:center;
-    justify-content: center;text-align: center;}
-  .post2atransparent2 { grid-area: post2atransparent2; background-color:transparent; color: white; 
-    display: flex;
-    align-items:center;
-    justify-content: center}
-  .post2atransparent3 { grid-area: post2atransparent3; background-color:transparent; color: white;font-size: 5vmin;
-    display: flex;
-    align-items:center;
-    justify-content: center;text-align: center;}
-
-  .post3a {
-    display: grid; 
-    grid-template-columns: 1fr 0.20% 1fr 0.20% 1fr; 
-    grid-template-rows: 0.25% 1fr 0.25%; 
-    gap: 0px 0px; 
+    align-items: flex-end;
+    justify-content: left;
+    font-size: 3vmin;
+    scroll-snap-align: start;
+}
+.post1a, .post2a, .post3a, .post4a, .post5a, .post6a {
+    display: grid;
+    grid-template-columns: 1fr 0.20% 1fr 0.20% 1fr;
+    grid-template-rows: 0.25% 1fr 0.25%;
+    gap: 0px 0px;
     grid-template-areas:
-      "post3awhite0 post3awhite0 post3awhite0 post3awhite0 post3awhite0"
-      "post3atransparent1 post3awhite1 post3atransparent2 post3awhite2 post3atransparent3"
-      "post3awhite3 post3awhite3 post3awhite3 post3awhite3 post3awhite3";
-    grid-area: post3a;scroll-snap-align: center;scroll-snap-stop: always;
-  }
-  .post3awhite0 { grid-area: post3awhite0; background-color:white;}
-  .post3awhite1 { grid-area: post3awhite1; background-color:white;}
-  .post3awhite2 { grid-area: post3awhite2; background-color:white;}
-  .post3awhite3 { grid-area: post3awhite3; background-color:white;}
-  .post3atransparent1 { grid-area: post3atransparent1; background-color:transparent; color: white;font-size: 5vmin;
+        "post1awhite0 post1awhite0 post1awhite0 post1awhite0 post1awhite0"
+        "post1atransparent1 post1awhite1 post1atransparent2 post1awhite2 post1atransparent3"
+        "post1awhite3 post1awhite3 post1awhite3 post1awhite3 post1awhite3";
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+.post1awhite0, .post1awhite1, .post1awhite2, .post1awhite3,
+.post2awhite0, .post2awhite1, .post2awhite2, .post2awhite3,
+.post3awhite0, .post3awhite1, .post3awhite2, .post3awhite3,
+.post4awhite0, .post4awhite1, .post4awhite2, .post4awhite3,
+.post5awhite0, .post5awhite1, .post5awhite2, .post5awhite3,
+.post6awhite0, .post6awhite1, .post6awhite2, .post6awhite3 {
+    background-color: white;
+}
+.post1atransparent1, .post1atransparent2, .post1atransparent3,
+.post2atransparent1, .post2atransparent2, .post2atransparent3,
+.post3atransparent1, .post3atransparent2, .post3atransparent3,
+.post4atransparent1, .post4atransparent2, .post4atransparent3,
+.post5atransparent1, .post5atransparent2, .post5atransparent3,
+.post6atransparent1, .post6atransparent2, .post6atransparent3 {
+    background-color: transparent;
+    color: white;
     display: flex;
-    align-items:center;
-    justify-content: center; text-align: center;}
-  .post3atransparent2 { grid-area: post3atransparent2; background-color:transparent; color: white; 
-    display: flex;
-    align-items:center;
-    justify-content: center}
-  .post3atransparent3 { grid-area: post3atransparent3; background-color:transparent; color: white;font-size: 5vmin;
-    display: flex;
-    align-items:center;
-    justify-content: center;text-align: center;}
-
-  .post4a {
-    display: grid; 
-    grid-template-columns: 1fr 0.20% 1fr 0.20% 1fr; 
-    grid-template-rows: 0.25% 1fr 0.25%; 
-    gap: 0px 0px; 
-    grid-template-areas:
-      "post4awhite0 post4awhite0 post4awhite0 post4awhite0 post4awhite0"
-      "post4atransparent1 post4awhite1 post4atransparent2 post4awhite2 post4atransparent3"
-      "post4awhite3 post4awhite3 post4awhite3 post4awhite3 post4awhite3";
-    grid-area: post4a;scroll-snap-align: center;scroll-snap-stop: always;
-  }
-  .post4awhite0 { grid-area: post4awhite0; background-color:white;}
-  .post4awhite1 { grid-area: post4awhite1; background-color:white;}
-  .post4awhite2 { grid-area: post4awhite2; background-color:white;}
-  .post4awhite3 { grid-area: post4awhite3; background-color:white;}
-  .post4atransparent1 { grid-area: post4atransparent1; background-color:transparent; color: white;font-size: 5vmin;
-    display: flex;
-    align-items:center;
-    justify-content: center;text-align: center;}
-  .post4atransparent2 { grid-area: post4atransparent2; background-color:transparent; color: white; 
-    display: flex;
-    align-items:center;
-    justify-content: center}
-  .post4atransparent3 { grid-area: post4atransparent3; background-color:transparent; color: white;font-size: 5vmin;
-    display: flex;
-    align-items:center;
-    justify-content: center;text-align: center;}
-
-  .post5a {
-    display: grid; 
-    grid-template-columns: 1fr 0.20% 1fr 0.20% 1fr; 
-    grid-template-rows: 0.25% 1fr 0.25%; 
-    gap: 0px 0px; 
-    grid-template-areas:
-      "post5awhite0 post5awhite0 post5awhite0 post5awhite0 post5awhite0"
-      "post5atransparent1 post5awhite1 post5atransparent2 post5awhite2 post5atransparent3"
-      "post5awhite3 post5awhite3 post5awhite3 post5awhite3 post5awhite3";
-    grid-area: post5a;scroll-snap-align: center;scroll-snap-stop: always;
-  }
-  .post5awhite0 { grid-area: post5awhite0; background-color:white;}
-  .post5awhite1 { grid-area: post5awhite1; background-color:white;}
-  .post5awhite2 { grid-area: post5awhite2; background-color:white;}
-  .post5awhite3 { grid-area: post5awhite3; background-color:white;}
-  .post5atransparent1 { grid-area: post5atransparent1; background-color:transparent; color: white;font-size: 5vmin;
-    display: flex;
-    align-items:center;
-    justify-content: center;text-align: center;}
-  .post5atransparent2 { grid-area: post5atransparent2; background-color:transparent; color: white; 
-    display: flex;
-    align-items:center;
-    justify-content: center}
-  .post5atransparent3 { grid-area: post5atransparent3; background-color:transparent; color: white;font-size: 5vmin;
-    display: flex;
-    align-items:center;
-    justify-content: center;text-align: center;}
-
-  .post6a {
-    display: grid; 
-    grid-template-columns: 1fr 0.20% 1fr 0.20% 1fr; 
-    grid-template-rows: 0.25% 1fr 0.25%; 
-    gap: 0px 0px; 
-    grid-template-areas:
-      "post6awhite0 post6awhite0 post6awhite0 post6awhite0 post6awhite0"
-      "post6atransparent1 post6awhite1 post6atransparent2 post6awhite2 post6atransparent3"
-      "post6awhite3 post6awhite3 post6awhite3 post6awhite3 post6awhite3";
-    grid-area: post6a;scroll-snap-align: center;scroll-snap-stop: always;
-  }
-  .post6awhite0 { grid-area: post6awhite0; background-color:white;}
-  .post6awhite1 { grid-area: post6awhite1; background-color:white;}
-  .post6awhite2 { grid-area: post6awhite2; background-color:white;}
-  .post6awhite3 { grid-area: post6awhite3; background-color:white;}
-  .post6atransparent1 { grid-area: post6atransparent1; background-color:transparent; color: white;font-size: 5vmin;
-    display: flex;
-    align-items:center;
-    justify-content: center;text-align: center;}
-  .post6atransparent2 { grid-area: post6atransparent2; background-color:transparent; color: white; 
-    display: flex;
-    align-items:center;
-    justify-content: center}
-  .post6atransparent3 { grid-area: post6atransparent3; background-color:transparent; color: white;font-size: 5vmin;
-    display: flex;
-    align-items:center;
-    justify-content: center;text-align: center;}
-
-  .mainb { z-index: 1; position: absolute;top:0; left:0;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 5%; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 0px; 
-    grid-template-areas: 
-      "header header header ."
-      "post1b post1b post1b ."
-      "post1b post1b post1b ."
-      "post1b post1b post1b ."
-      "post1b post1b post1b ."
-      "post1b post1b post1b ."
-      "post2b post2b post2b ."
-      "post2b post2b post2b ."
-      "post2b post2b post2b ."
-      "post2b post2b post2b ."
-      "post2b post2b post2b ."
-      "post3b post3b post3b ."
-      "post3b post3b post3b ."
-      "post3b post3b post3b ."
-      "post3b post3b post3b ."
-      "post3b post3b post3b ."
-      "post4b post4b post4b ."
-      "post4b post4b post4b ."
-      "post4b post4b post4b ."
-      "post4b post4b post4b ."
-      "post4b post4b post4b ."
-      "post5b post5b post5b ."
-      "post5b post5b post5b ."
-      "post5b post5b post5b ."
-      "post5b post5b post5b ."
-      "post5b post5b post5b ."
-      "post6b post6b post6b ."
-      "post6b post6b post6b ."
-      "post6b post6b post6b ."
-      "post6b post6b post6b ."
-      "post6b post6b post6b ."
-      ". . . ."; 
-      height: 300vh; width: 100%;
-  }
-  .post1b {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 5vmin;
+}
+.mainb {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 5%;
+    grid-template-rows: repeat(32, 1fr);
+    gap: 0px 0px;
+     grid-template-areas:
+        "header header header ."
+        "post1b post1b post1b ."
+        "post1b post1b post1b ."
+        "post1b post1b post1b ."
+        "post1b post1b post1b ."
+        "post1b post1b post1b ."
+        "post2b post2b post2b ."
+        "post2b post2b post2b ."
+        "post2b post2b post2b ."
+        "post2b post2b post2b ."
+        "post2b post2b post2b ."
+        "post3b post3b post3b ."
+        "post3b post3b post3b ."
+        "post3b post3b post3b ."
+        "post3b post3b post3b ."
+        "post3b post3b post3b ."
+        "post4b post4b post4b ."
+        "post4b post4b post4b ."
+        "post4b post4b post4b ."
+        "post4b post4b post4b ."
+        "post4b post4b post4b ."
+        "post5b post5b post5b ."
+        "post5b post5b post5b ."
+        "post5b post5b post5b ."
+        "post5b post5b post5b ."
+        "post5b post5b post5b ."
+        "post6b post6b post6b ."
+        "post6b post6b post6b ."
+        "post6b post6b post6b ."
+        "post6b post6b post6b ."
+        "post6b post6b post6b ."
+        ". . . .";
+    height: 300vh;
+    width: 100%;
+}
+.post1b {
     grid-area: post1b;
-  }
-  .post2b {
+}
+.post2b {
     grid-area: post2b;
-  }
-  .post3b {
+}
+.post3b {
     grid-area: post3b;
-  }
-  .post4b {
+}
+.post4b {
     grid-area: post4b;
-  }
-  .post5b {
+}
+.post5b {
     grid-area: post5b;
-  }
-  .post6b {
+}
+.post6b {
     grid-area: post6b;
-  }
-
+}
