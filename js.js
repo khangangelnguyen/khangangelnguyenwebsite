@@ -23,7 +23,7 @@ function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3,
           sourceVideo.autoplay = true;
           sourceVideo.loop = true;
           sourceVideo.muted = true;
-          video.appendChild(sourceWebm);
+          video.appendChild(sourceVideo);
 
           target.replaceChild(video, img);
       }
