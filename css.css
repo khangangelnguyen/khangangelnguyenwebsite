@@ -19,7 +19,7 @@
         /* Portrait mode - rotate content */
         .portrait {
             transform: rotate(-90deg);
-            width: 100vh;
+            width: 300vh;
             overflow-y: hidden; /* Prevent scrolling */
         }
 
