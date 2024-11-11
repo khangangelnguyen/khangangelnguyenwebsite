@@ -235,7 +235,7 @@ html {
     grid-template-columns: 1fr 1fr 1fr 5%;
     grid-template-rows: repeat(32, 1fr);
     gap: 0px 0px;
-     grid-template-areas:
+    grid-template-areas:
         "header header header ."
         "post1b post1b post1b ."
         "post1b post1b post1b ."
