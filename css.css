@@ -29,8 +29,8 @@ html {
 @media only screen and (orientation: portrait) {
     body,
     html {
-        width: 300vh;
-        height: 100vw;
+        width: 100vh;
+        height: 533.33vw;
         /* Adjust other styles as needed */
     }
 }
