@@ -102,9 +102,9 @@ html {
   "."
   "work"
   "about"
+  "contact"
   "instagram"
-  "."
-  "contact"; }
+  "."; }
 .work { grid-area: work;display: flex;
   align-items:center;
   justify-content: left; pointer-events: auto;font-size: 2vmin; }
@@ -116,7 +116,7 @@ html {
   justify-content: left;pointer-events: auto; font-size: 2vmin;}
 .contact { grid-area: contact;display: flex;
   align-items:center;
-  justify-content: left;pointer-events: auto;font-size: 1.5vmin; }
+  justify-content: left;pointer-events: auto;font-size: 2vmin;}
 
 .slogan { grid-area: slogan;display: flex;
   align-items:flex-start;
