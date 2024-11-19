@@ -84,7 +84,7 @@ html {
     ". menu2 ."
     ". slogan ."
     ". slogan ."
-    ". contact ."
+    ". . ."
     ". . ."
     ". . ."
     ". . ."
@@ -96,14 +96,15 @@ html {
 .menu2 { grid-area: menu2;
   display: grid; 
   grid-template-columns: 1fr; 
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
   gap: 0px 0px; 
   grid-template-areas: 
   "."
   "work"
   "about"
   "instagram"
-  ".";font-size: 2vmin; }
+  "."
+  "contact";font-size: 2vmin; }
 .work { grid-area: work;display: flex;
   align-items:center;
   justify-content: left; pointer-events: auto; }
