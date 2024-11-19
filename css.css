@@ -84,7 +84,7 @@ html {
     ". menu2 ."
     ". slogan ."
     ". slogan ."
-    ". . ."
+    ". contact ."
     ". . ."
     ". . ."
     ". . ."
@@ -118,6 +118,9 @@ html {
   align-items:flex-start;
   justify-content: left;
   font-size: 1.5vmin; }
+.contact { grid-area: contact;display: flex;
+  align-items:center;
+  justify-content: left;pointer-events: auto; }
 
 .main { grid-area: main;z-index: 0; position: relative;
   height: 300vh; 
