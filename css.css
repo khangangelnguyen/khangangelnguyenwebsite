@@ -114,14 +114,15 @@ html {
 .instagram { grid-area: instagram;display: flex;
   align-items:center;
   justify-content: left;pointer-events: auto; }
+.contact { grid-area: contact;display: flex;
+  align-items:center;
+  justify-content: left;pointer-events: auto;font-size: 1.5vmin; }
 
 .slogan { grid-area: slogan;display: flex;
   align-items:flex-start;
   justify-content: left;
   font-size: 1.5vmin; }
-.contact { grid-area: contact;display: flex;
-  align-items:center;
-  justify-content: left;pointer-events: auto;font-size: 1.5vmin; }
+
 
 .main { grid-area: main;z-index: 0; position: relative;
   height: 300vh; 
