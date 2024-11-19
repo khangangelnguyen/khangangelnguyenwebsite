@@ -104,16 +104,16 @@ html {
   "about"
   "instagram"
   "."
-  "contact";font-size: 2vmin; }
+  "contact"; }
 .work { grid-area: work;display: flex;
   align-items:center;
-  justify-content: left; pointer-events: auto; }
+  justify-content: left; pointer-events: auto;font-size: 2vmin; }
 .about { grid-area: about;display: flex;
   align-items:center;
-  justify-content:left; pointer-events: auto; }
+  justify-content:left; pointer-events: auto;font-size: 2vmin; }
 .instagram { grid-area: instagram;display: flex;
   align-items:center;
-  justify-content: left;pointer-events: auto; }
+  justify-content: left;pointer-events: auto; font-size: 2vmin;}
 .contact { grid-area: contact;display: flex;
   align-items:center;
   justify-content: left;pointer-events: auto;font-size: 1.5vmin; }
