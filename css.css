@@ -102,8 +102,8 @@ html {
   "."
   "work"
   "about"
-  "contact"
   "instagram"
+  "contact"
   ".";font-size: 2vmin; }
 .work { grid-area: work;display: flex;
   align-items:center;
