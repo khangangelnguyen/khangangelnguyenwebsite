@@ -125,7 +125,7 @@ html {
 
 
 .main { grid-area: main;z-index: 0; position: relative;
-  height: 500vh; 
+  height: max-content; 
 }  
 .maina { z-index: 2; position: absolute;top:0; left:0;
   display: grid; 
@@ -170,7 +170,7 @@ html {
     "post6a post6a post6a ."
     "post6a post6a post6a ."
     ". . . ."; 
-    height: 500vh; width: 100%;
+    height: max-content; width: 100%;
 }
 .header { grid-area: header; 
   display: flex;
@@ -417,7 +417,7 @@ html {
     "post6b post6b post6b ."
     "post6b post6b post6b ."
     ". . . ."; 
-    height: 500vh; width: 100%;
+    height: max-content; width: 100%;
 }
 .post1b {
   grid-area: post1b;
