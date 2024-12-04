@@ -104,7 +104,7 @@ html {
   "contact"
   "instagram"
   "."; }
-.resume { grid-area: about;display: flex;
+.resume { grid-area: resume;display: flex;
   align-items:center;
   justify-content:left; pointer-events: auto;font-size: 2vmin; }
 .instagram { grid-area: instagram;display: flex;
