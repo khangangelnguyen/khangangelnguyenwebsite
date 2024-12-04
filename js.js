@@ -2,7 +2,7 @@ space = "&nbsp;";
 enter = "<br>";
 hr = "<hr>";
 
-function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3, whiteId1, whiteId2) {
+function addHoverEffect(triggerId, targetId, imgSrc, vimeoEmbed, textId1, textId3, whiteId1, whiteId2) {
   const trigger = document.getElementById(triggerId);
   const target = document.getElementById(targetId);
   const text1 = document.getElementById(textId1);
@@ -10,17 +10,11 @@ function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3,
   const white1 = document.getElementById(whiteId1);
   const white2 = document.getElementById(whiteId2);
 
-  trigger.addEventListener('mouseenter', function() {
-      // Swap image with video
+  trigger.addEventListener('mouseenter', function () {
+      // Swap image with Vimeo embed
       const img = target.querySelector('img');
       if (img) {
-           const video = document.createElement('video');
-          video.src = videoSrc;
-          video.autoplay = true;
-          video.loop = true;
-          video.muted = true;
-
-          target.replaceChild(video, img);
+          target.innerHTML = vimeoEmbed; // Replace content with Vimeo embed
       }
 
       // Hide text
@@ -40,13 +34,10 @@ function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3,
       }
   });
 
-  trigger.addEventListener('mouseleave', function() {
-      // Swap video back to image
-      const video = target.querySelector('video');
-      if (video) {
-          const img = document.createElement('img');
-          img.src = imgSrc;
-          target.replaceChild(img, video);
+  trigger.addEventListener('mouseleave', function () {
+      // Swap Vimeo embed back to image
+      if (target.querySelector('iframe')) {
+          target.innerHTML = `<img src="${imgSrc}" style="width:100%;height:100%;">`; // Restore image
       }
 
       // Show text
@@ -67,13 +58,13 @@ function addHoverEffect(triggerId, targetId, imgSrc, videoSrc, textId1, textId3,
   });
 }
 
-// Handling each div individually with additional white elements
-addHoverEffect('post1a', 'post1b', 'images/reel1pic.jpg', 'videos/reel1video.mp4', 'post1atransparent1', 'post1atransparent3', 'post1awhite1', 'post1awhite2');
-addHoverEffect('post2a', 'post2b', 'images/reel2pic.jpg', 'videos/reel2video.mp4', 'post2atransparent1', 'post2atransparent3', 'post2awhite1', 'post2awhite2');
-addHoverEffect('post3a', 'post3b', 'images/reel3pic.jpg', 'videos/reel3video.mp4', 'post3atransparent1', 'post3atransparent3', 'post3awhite1', 'post3awhite2');
-addHoverEffect('post4a', 'post4b', 'images/reel4pic.jpg', 'videos/reel4video.mp4', 'post4atransparent1', 'post4atransparent3', 'post4awhite1', 'post4awhite2');
-addHoverEffect('post5a', 'post5b', 'images/reel5pic.jpg', 'videos/reel5video.mp4', 'post5atransparent1', 'post5atransparent3', 'post5awhite1', 'post5awhite2');
-addHoverEffect('post6a', 'post6b', 'images/reel6pic.jpg', 'videos/reel6video.mp4', 'post6atransparent1', 'post6atransparent3', 'post6awhite1', 'post6awhite2');
+// Handling each div individually with Vimeo links
+addHoverEffect('post1a', 'post1b', 'images/reel1pic.jpg', '<div style="padding:42.5% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1035884117?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="CATCHE BALL (Short 2024) Sneak Peek"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>', 'post1atransparent1', 'post1atransparent3', 'post1awhite1', 'post1awhite2');
+addHoverEffect('post2a', 'post2b', 'images/reel2pic.jpg', '<div style="padding:42.5% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1035884506?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Elroy (Short 2024) - Sneak Peak"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>', 'post2atransparent1', 'post2atransparent3', 'post2awhite1', 'post2awhite2');
+addHoverEffect('post3a', 'post3b', 'images/reel3pic.jpg', '<div style="padding:42.5% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1035884518?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="The Greatest Man (Short 2024) - Sneak Peek"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>', 'post3atransparent1', 'post3atransparent3', 'post3awhite1', 'post3awhite2');
+addHoverEffect('post4a', 'post4b', 'images/reel4pic.jpg', '<div style="padding:42.5% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1035884535?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Sunday (Short 2024) - Sneak Peek"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>', 'post4atransparent1', 'post4atransparent3', 'post4awhite1', 'post4awhite2');
+addHoverEffect('post5a', 'post5b', 'images/reel5pic.jpg', '<div style="padding:42.5% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1035884552?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Girl with the Spices (Short 2024) - Sneak Peak"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>', 'post5atransparent1', 'post5atransparent3', 'post5awhite1', 'post5awhite2');
+addHoverEffect('post6a', 'post6b', 'images/reel6pic.jpg', '<div style="padding:42.5% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1035884566?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Mini Fridge (Short 2024) - Sneak Peek"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>', 'post6atransparent1', 'post6atransparent3', 'post6awhite1', 'post6awhite2');
 
 var cursor = {
   delay: 8,
