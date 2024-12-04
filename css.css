@@ -92,7 +92,7 @@ html {
 .title { grid-area: title;
   display: flex;
   align-items:flex-end;
-  justify-content: left;font-size: 4vmin; }
+  justify-content: left;font-size: 5vmin; }
 .menu2 { grid-area: menu2;
   display: grid; 
   grid-template-columns: 1fr; 
@@ -106,18 +106,18 @@ html {
   "."; }
 .resume { grid-area: resume;display: flex;
   align-items:center;
-  justify-content:left; pointer-events: auto;font-size: 2vmin; }
+  justify-content:left; pointer-events: auto;font-size: 3vmin; }
 .instagram { grid-area: instagram;display: flex;
   align-items:center;
-  justify-content: left;pointer-events: auto; font-size: 2vmin;}
+  justify-content: left;pointer-events: auto; font-size: 3vmin;}
 .contact { grid-area: contact;display: flex;
   align-items:center;
-  justify-content: left;pointer-events: auto;font-size: 2vmin;}
+  justify-content: left;pointer-events: auto;font-size: 3vmin;}
 
 .slogan { grid-area: slogan;display: flex;
   align-items:flex-start;
   justify-content: left;
-  font-size: 1.5vmin; }
+  font-size: 2.5vmin; }
 
 
 .main { grid-area: main;z-index: 0; position: relative;
@@ -171,7 +171,7 @@ html {
 .header { grid-area: header; 
   display: flex;
   align-items:flex-end;
-  justify-content: left;font-size: 3vmin;scroll-snap-align:start;
+  justify-content: left;font-size: 4vmin;scroll-snap-align:start;
 }
 
 .post1a {
