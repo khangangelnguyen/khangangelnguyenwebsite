@@ -130,10 +130,15 @@ html {
 .maina { z-index: 2; position: absolute;top:0; left:0;
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 5%; 
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
   gap: 0px 0px; 
   grid-template-areas: 
     "header header header ."
+    "post7a post7a post7a ."
+    "post7a post7a post7a ."
+    "post7a post7a post7a ."
+    "post7a post7a post7a ."
+    "post7a post7a post7a ."
     "post1a post1a post1a ."
     "post1a post1a post1a ."
     "post1a post1a post1a ."
@@ -341,13 +346,46 @@ html {
   align-items:center;
   justify-content: center;text-align: center;}
 
+.post7a {
+  display: grid; 
+  grid-template-columns: 1fr 0.20% 1fr 0.20% 1fr; 
+  grid-template-rows: 0.25% 1fr 0.25%; 
+  gap: 0px 0px; 
+  grid-template-areas:
+    "post7awhite0 post7awhite0 post7awhite0 post7awhite0 post7awhite0"
+    "post7atransparent1 post7awhite1 post7atransparent2 post7awhite2 post7atransparent3"
+    "post7awhite3 post7awhite3 post7awhite3 post7awhite3 post7awhite3";
+  grid-area: post7a;scroll-snap-align: center;scroll-snap-stop: always;
+}
+.post7awhite0 { grid-area: post7awhite0; background-color:white;}
+.post7awhite1 { grid-area: post7awhite1; background-color:white;}
+.post7awhite2 { grid-area: post7awhite2; background-color:white;}
+.post7awhite3 { grid-area: post7awhite3; background-color:white;}
+.post7atransparent1 { grid-area: post7atransparent1; background-color:transparent; color: white;font-size: 5vmin;
+  display: flex;
+  align-items:center;
+  justify-content: center;text-align: center;}
+.post7atransparent2 { grid-area: post7atransparent2; background-color:transparent; color: white; 
+  display: flex;
+  align-items:center;
+  justify-content: center}
+.post7atransparent3 { grid-area: post7atransparent3; background-color:transparent; color: white;font-size: 5vmin;
+  display: flex;
+  align-items:center;
+  justify-content: center;text-align: center;}
+
 .mainb { z-index: 1; position: absolute;top:0; left:0;
   display: grid; 
   grid-template-columns: 1fr 1fr 1fr 5%; 
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px; 
   grid-template-areas: 
     "header header header ."
+    "post7b post7b post7b ."
+    "post7b post7b post7b ."
+    "post7b post7b post7b ."
+    "post7b post7b post7b ."
+    "post7b post7b post7b ."
     "post1b post1b post1b ."
     "post1b post1b post1b ."
     "post1b post1b post1b ."
@@ -399,3 +437,7 @@ html {
 .post6b {
   grid-area: post6b;
 }
+.post7b {
+  grid-area: post7b;
+}
+
