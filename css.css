@@ -106,18 +106,18 @@ html {
   "."; }
 .resume { grid-area: resume;display: flex;
   align-items:center;
-  justify-content:left; pointer-events: auto;font-size: 3vmin; }
+  justify-content:left; pointer-events: auto;font-size: 2.5vmin; }
 .instagram { grid-area: instagram;display: flex;
   align-items:center;
-  justify-content: left;pointer-events: auto; font-size: 3vmin;}
+  justify-content: left;pointer-events: auto; font-size: 2.5vmin;}
 .contact { grid-area: contact;display: flex;
   align-items:center;
-  justify-content: left;pointer-events: auto;font-size: 3vmin;}
+  justify-content: left;pointer-events: auto;font-size: 2.5vmin;}
 
 .slogan { grid-area: slogan;display: flex;
   align-items:flex-start;
   justify-content: left;
-  font-size: 2.5vmin; }
+  font-size: 2vmin; }
 
 
 .main { grid-area: main;z-index: 0; position: relative;
@@ -171,7 +171,7 @@ html {
 .header { grid-area: header; 
   display: flex;
   align-items:flex-end;
-  justify-content: left;font-size: 4vmin;scroll-snap-align:start;
+  justify-content: left;font-size: 3.5vmin;scroll-snap-align:start;
 }
 
 .post1a {
